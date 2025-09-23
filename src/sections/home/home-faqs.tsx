@@ -20,7 +20,7 @@ interface FaqType {
 const faqs: FaqType[] = [
   {
     question: 'What is ReLight permanent outdoor lighting?',
-    answer: 'ReLight offers a permanent outdoor lighting solution designed for year-round use, providing customizable and energy-efficient lighting for homes and businesses.'
+    answer: 'ReLight is an authorized dealer for Jellyfish Lighting, a permanent outdoor lighting solution for year-round use, providing customizable and energy-efficient lighting for homes and businesses.'
   },
   {
     question: 'How durable is the ReLight system?',

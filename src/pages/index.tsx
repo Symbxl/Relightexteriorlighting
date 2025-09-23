@@ -22,6 +22,7 @@ const Page: PageType = () => {
         <HomeApp />
         <HomeReviews />
         <HomeFaqs />
+        
       </main>
     </>
   );

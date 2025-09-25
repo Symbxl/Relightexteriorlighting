@@ -8,6 +8,7 @@ import type { Page as PageType } from 'src/types/page';
 import HomeInfo from '../sections/home/home-info';
 import { HomeApp } from '../sections/home/home-app';
 import { HomeCta } from '../sections/home/home-cta';
+import { HomeUpload } from 'src/sections/home/home-upload';
 const Page: PageType = () => {
   usePageView();
 
@@ -16,8 +17,9 @@ const Page: PageType = () => {
       <Seo title='Relight Exterior Lighting' />
       <main>
         <HomeHero />
-        <HomeCta />
         <HomeFeatures />
+        <HomeUpload />
+        <HomeCta />
         <HomeInfo />
         <HomeApp />
         <HomeReviews />

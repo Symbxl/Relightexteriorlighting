@@ -49,38 +49,45 @@ interface Review {
   author: string;
   message: string;
   stars: number;
+  image: string;
 }
 
 const reviews: Review[] = [
   {
     author: 'Oded R.',
     message: 'I\'m highly satisfied, the installation was smooth, and the lights look stunning on our house. The system is easy to control, and we love using different themes for holidays!',
-    stars: 5
+    stars: 5,
+    image: '/assets/10.png'
   },
   {
     author: 'Mark S.',
     message: 'They really has exceeded my expectations! The build quality is top-notch, and the mobile app makes it easy to change the lights depending on the occasion. Highly recommend it to anyone looking for permanent outdoor lighting.',
-    stars: 5
+    stars: 5,
+    image: '/assets/11.png'
   },
   {
     author: 'Lorenz N.',
-    message: 'The customization options with ReLight are fantastic. I never thought we’d use so many different lighting modes, but we do! The product is well-built and designed to last.',
-    stars: 5
+    message: 'The customization options with ReLight are fantastic. I never thought we\'d use so many different lighting modes, but we do! The product is well-built and designed to last.',
+    stars: 5,
+    image: '/assets/12.png'
   },
   {
     author: 'Ruthy G.',
     message: 'Amazing customer service! The team at ReLight was very responsive and helpful during the installation process. We are very happy with the result and the lighting looks great!',
-    stars: 5
+    stars: 5,
+    image: '/assets/13.png'
   },
   {
     author: 'Dean H.',
     message: 'The system is incredibly user-friendly. I love how I can control everything from my phone, and the lights are perfect for any occasion—from accent lighting to full-on holiday themes!',
-    stars: 5
+    stars: 5,
+    image: '/assets/15.png'
   },
   {
     author: 'Cole S.',
-    message: 'Great product and excellent customer support. The installation team was professional, and the lights make our home stand out beautifully. Couldn’t be happier with ReLight!',
-    stars: 5
+    message: 'Great product and excellent customer support. The installation team was professional, and the lights make our home stand out beautifully. Couldn\'t be happier with ReLight!',
+    stars: 5,
+    image: '/assets/16.png'
   }
 ];
 
@@ -137,7 +144,7 @@ export const HomeReviews: FC = () => (
             color="text.secondary"
             variant="subtitle1"
           >
-            Our lighting is so amazing that people can’t help but fall in love with it. Simplicity and functionality made easy when implementing our advanced app features.
+           Permanant Outdoor Lights so amazing that people can’t help but fall in love with it. Simplicity and functionality made easy when implementing our advanced app features.
           </Typography>
         </Stack>
         <Grid
@@ -178,6 +185,18 @@ export const HomeReviews: FC = () => (
                   >
                     {review.message}
                   </Typography>
+                  <Box
+                    component="img"
+                    src={review.image}
+                    alt="Review Image"
+                    sx={{
+                      width: '100%',
+                      height: 120,
+                      objectFit: 'cover',
+                      borderRadius: 1,
+                      my: 2
+                    }}
+                  />
                   <Divider sx={{ my: 2 }} />
                   <Typography color="text.secondary">
                     {review.author}

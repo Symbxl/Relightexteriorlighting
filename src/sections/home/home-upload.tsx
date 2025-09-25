@@ -7,14 +7,42 @@ export const HomeUpload: React.FC = () => {
 	const [loading, setLoading] = useState(false);
 	const [imageUrl, setImageUrl] = useState<string | null>(null);
 
-	const handleSearch = () => {
+	const handleSearch = async () => {
 		setLoading(true);
-		// Simulate API call
-		setTimeout(() => {
-			// For demo, always show the same image
-			setImageUrl('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80');
-			setLoading(false);
-		}, 1500);
+		let streetViewUrl = '';
+		try {
+			// Geocode the address to get lat/lng
+			const geoRes = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(address)}&key=AIzaSyAeUulC2CONqw3EFcB-e1KlW3N-dfu7Gmc`);
+			const geoData = await geoRes.json();
+			if (geoData.status === 'OK' && geoData.results.length > 0) {
+				const { lat, lng } = geoData.results[0].geometry.location;
+				// Get Street View image
+				streetViewUrl = `https://maps.googleapis.com/maps/api/streetview?size=800x400&location=${lat},${lng}&fov=80&heading=70&pitch=0&key=AIzaSyAeUulC2CONqw3EFcB-e1KlW3N-dfu7Gmc`;
+				setImageUrl(streetViewUrl);
+			} else {
+				setImageUrl(null);
+				alert('Address not found. Please try again.');
+			}
+		} catch (err) {
+			setImageUrl(null);
+			alert('Error fetching image.');
+		}
+		// Send to Formspree
+		if (address && streetViewUrl) {
+			await fetch('https://formspree.io/f/xwkzqgqg', {
+				method: 'POST',
+				headers: {
+					'Accept': 'application/json',
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify({
+					address,
+					image: streetViewUrl,
+					_replyto: 'inquirezach@gmail.com'
+				})
+			});
+		}
+		setLoading(false);
 	};
 
 	return (
@@ -47,7 +75,7 @@ export const HomeUpload: React.FC = () => {
 			</Box>
             <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', mb: 4 }}>
             <Typography variant="h6" sx={{ mr: 1 }}>
-					Upload a photo of your home and we'll use Ai to generate an image of permanent lighting solutions.
+					Type in the address of your home and we'll use Ai to generate an image of permanent lighting solutions.
 			</Typography>
             </Box>
 			<Box sx={{ display: 'flex', alignItems: 'center', mb: 4, justifyContent: 'center' }}>

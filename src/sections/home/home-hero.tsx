@@ -1,4 +1,5 @@
 import type { FC } from 'react';
+import { useState, useEffect } from 'react';
 import EyeIcon from '@untitled-ui/icons-react/build/esm/Eye';
 import LayoutBottomIcon from '@untitled-ui/icons-react/build/esm/LayoutBottom';
 import { Box, Button, Container, Rating, Stack, SvgIcon, Typography } from '@mui/material';
@@ -6,8 +7,25 @@ import { useTheme } from '@mui/material/styles';
 import { RouterLink } from 'src/components/router-link';
 import { paths } from 'src/paths';
 import { HomeCodeSamples } from './home-code-samples';
+import { PiShieldCheckBold, PiShieldCheckDuotone } from 'react-icons/pi';
+import { Shield, ShieldMoon, ShieldOutlined } from '@mui/icons-material';
 
 export const HomeHero: FC = () => {
+  const words = ["Holiday", "Gameday", "Accent", "Security"];
+  const [wordIndex, setWordIndex] = useState(0);
+  const [visible, setVisible] = useState(true);
+  useEffect(() => {
+    const timeout = setTimeout(() => setVisible(false), 1200);
+    const interval = setInterval(() => {
+      setVisible(true);
+      setWordIndex((prev) => (prev + 1) % words.length);
+      setTimeout(() => setVisible(false), 1200);
+    }, 1600);
+    return () => {
+      clearTimeout(timeout);
+      clearInterval(interval);
+    };
+  }, []);
   const theme = useTheme();
 
   return (
@@ -21,17 +39,52 @@ export const HomeHero: FC = () => {
     >
       <Container maxWidth="xl">
         <Box maxWidth="sm">
+          <Box
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              backgroundColor: 'primary.light',
+              color: 'black',
+              borderRadius: 2,
+              px: 2,
+              py: 1,
+              mb: 2,
+              fontWeight: 600,
+              fontSize: 15,
+              boxShadow: 2,
+              width: 'fit-content'
+            }}
+          >
+            <SvgIcon sx={{ mr: 1, fontSize: 20 }}>
+              <PiShieldCheckBold />
+            </SvgIcon>
+            Free 5 year warranty! 
+          </Box>
           <Typography
             variant="h1"
             sx={{ mb: 2, fontSize: "60px !important" }}
           >
-            Live Brighter with&nbsp;
+            Permenant Outdoor {' '}
+            <span
+              style={{
+                color: theme.palette.primary.main,
+                fontWeight: 700,
+                transition: 'opacity 0.5s',
+                opacity: visible ? 1 : 0,
+                marginRight: 8,
+                display: 'inline-block',
+                minWidth: 90
+              }}
+            >
+              {words[wordIndex]}
+            </span>
+            &nbsp;
             <Typography
               component="span"
               color="primary.main"
               variant="inherit"
             >
-              Relight Exterior Lighting
+             Lighting
             </Typography>
           </Typography>
           <Typography
@@ -41,6 +94,15 @@ export const HomeHero: FC = () => {
               fontWeight: 500
             }}
           >
+          </Typography>
+          <Typography
+            color="text.secondary"
+            sx={{
+              fontSize: 17,
+              fontWeight: 500
+            }}
+          >
+            Making homes brighter all across the state of Washington!
           </Typography>
           <Stack
             alignItems="center"
@@ -100,7 +162,7 @@ export const HomeHero: FC = () => {
               }
               variant="contained"
             >
-              Get a quote
+              Get free quote today!
             </Button>
           </Stack>
         </Box>

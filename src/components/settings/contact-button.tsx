@@ -1,12 +1,14 @@
 import type { FC } from 'react';
 import ContactIcon from '@untitled-ui/icons-react/build/esm/Send01';
+import PhoneIcon from '@untitled-ui/icons-react/build/esm/Phone';
 import { Box, ButtonBase, SvgIcon, Tooltip } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
 export const ContactButton: FC = () => {
 	const navigate = useNavigate();
+	const isContactPage = window.location.pathname === '/contact';
 	return (
-		<Tooltip title="Contact">
+		<Tooltip title={isContactPage ? "Call" : "Contact"}>
 			<Box
 				sx={{
 					backgroundColor: 'background.paper',
@@ -15,7 +17,7 @@ export const ContactButton: FC = () => {
 					boxShadow: 16,
 					margin: (theme) => theme.spacing(4),
 					position: 'fixed',
-					right: 80,
+					right: { xs: 16, sm: 32, md: 80 },
 					zIndex: (theme) => theme.zIndex.speedDial
 				}}
 			>
@@ -26,10 +28,16 @@ export const ContactButton: FC = () => {
 						color: 'primary.contrastText',
 						p: '10px'
 					}}
-					onClick={() => navigate('/contact')}
+					onClick={() => {
+						if (isContactPage) {
+							window.location.href = 'tel:+14254651290';
+						} else {
+							navigate('/contact');
+						}
+					}}
 				>
 					<SvgIcon>
-						<ContactIcon />
+						{isContactPage ? <PhoneIcon /> : <ContactIcon />}
 					</SvgIcon>
 				</ButtonBase>
 			</Box>

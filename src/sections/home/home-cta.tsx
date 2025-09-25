@@ -1,6 +1,7 @@
 import type { FC } from 'react';
 import { Box, Container, Stack, Typography } from '@mui/material';
-
+import EyeIcon from '@untitled-ui/icons-react/build/esm/Eye';
+import { SvgIcon } from '@mui/material';
 export const HomeCta: FC = () => (
   <Box
     sx={{

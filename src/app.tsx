@@ -80,8 +80,7 @@ export const App: FC = () => {
                             : (
                               <>
                                 {element}
-                                <ContactButton />
-                                <SettingsDrawer
+                                {/* <SettingsDrawer
                                   canReset={settings.isCustom}
                                   onClose={settings.handleDrawerClose}
                                   onReset={settings.handleReset}
@@ -97,7 +96,9 @@ export const App: FC = () => {
                                     layout: settings.layout,
                                     navColor: settings.navColor
                                   }}
-                                />
+                                /> */}
+                               <ContactButton />
+
                               </>
                             )
                         }

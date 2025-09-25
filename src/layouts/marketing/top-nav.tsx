@@ -1,4 +1,6 @@
 import type { FC, ReactNode } from 'react';
+import ContactIcon from '@untitled-ui/icons-react/build/esm/Send01';
+import PhoneIcon from '@untitled-ui/icons-react/build/esm/Phone';
 import { useCallback, useState } from 'react';
 import PropTypes from 'prop-types';
 import Menu01Icon from '@untitled-ui/icons-react/build/esm/Menu01';
@@ -184,11 +186,16 @@ export const TopNav: FC<TopNavProps> = (props) => {
             spacing={2}
             sx={{ flexGrow: 1 }}
           >
-             <Button
+            <Button
               component={RouterLink}
               href="/contact"
               size={mdUp ? 'medium' : 'small'}
               variant="contained"
+              startIcon={
+                <SvgIcon fontSize="inherit" sx={{ fontSize: 15 }}>
+                  <ContactIcon />
+                </SvgIcon>
+              }
             >
               Contact
             </Button>
@@ -198,6 +205,11 @@ export const TopNav: FC<TopNavProps> = (props) => {
               href="tel:+14254651290"
               size={mdUp ? 'medium' : 'small'}
               variant="contained"
+              startIcon={
+                <SvgIcon fontSize="inherit" sx={{ fontSize: 15 }}>
+                  <PhoneIcon />
+                </SvgIcon>
+              }
             >
               425-465-1290
             </Button>

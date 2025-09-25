@@ -107,18 +107,25 @@ export const HomeHero: FC = () => {
         <Box
           sx={{
             pt: '120px',
-            position: 'relative'
+            position: 'relative',
+            display: 'flex',
+            justifyContent: { xs: 'center', md: 'flex-end' },
+            alignItems: 'center'
           }}
         >
           <Box
             sx={{
               overflow: 'hidden',
-              width: '100%',
+              width: { xs: '100%', sm: '100%', md: '1320px' },
+              maxWidth: '100%',
               fontSize: 0,
               mt: -2, // hack to cut the bottom box shadow
-              mx: -2,
+              mx: 'auto',
               pt: 2,
               px: 2,
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
               '& img': {
                 borderTopLeftRadius: (theme) => theme.shape.borderRadius * 2.5,
                 borderTopRightRadius: (theme) => theme.shape.borderRadius * 2.5,
@@ -133,11 +140,9 @@ export const HomeHero: FC = () => {
               muted
               loop
               playsInline
-              style={{ width: '100%', height: '100%', borderRadius: "12px" }}
+              style={{ width: '100%', maxWidth: '1320px', height: 'auto', borderRadius: "12px" }}
             />
-
           </Box>
-
         </Box>
       </Container >
     </Box >

@@ -8,6 +8,7 @@ import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { RTL } from './components/rtl';
 import { SplashScreen } from './components/splash-screen';
 import { SettingsButton } from './components/settings/settings-button';
+import { ContactButton } from './components/settings/contact-button';
 import { SettingsDrawer } from './components/settings/settings-drawer';
 import { Toaster } from './components/toaster';
 import { SettingsConsumer, SettingsProvider } from './contexts/settings-context';
@@ -79,7 +80,7 @@ export const App: FC = () => {
                             : (
                               <>
                                 {element}
-                                <SettingsButton onClick={settings.handleDrawerOpen} />
+                                <ContactButton />
                                 <SettingsDrawer
                                   canReset={settings.isCustom}
                                   onClose={settings.handleDrawerClose}

@@ -121,7 +121,6 @@ export const TopNav: FC<TopNavProps> = (props) => {
               alignItems="center"
               spacing={0.5}
             >
-              {/* Visit our gallery link removed as requested */}
               <Stack
                 alignItems="center"
                 component={RouterLink}
@@ -131,23 +130,48 @@ export const TopNav: FC<TopNavProps> = (props) => {
                 spacing={1}
                 sx={{ textDecoration: 'none' }}
               >
-                {/* Logo removed as requested */}
+                <Box
+                  sx={{
+                    display: 'inline-flex',
+                    height: 24,
+                    width: 24
+                  }}
+                >
+                 
+                </Box>
                 {mdUp && (
-                  <Box
-                    sx={{
-                      color: 'text.primary',
-                      fontFamily: '\'Plus Jakarta Sans\', sans-serif',
-                      fontSize: 14,
-                      fontWeight: 800,
-                      letterSpacing: '0.3px',
-                      lineHeight: 2.5,
-                      '& span': {
-                        color: 'primary.main'
-                      }
-                    }}
+                  <Stack
+                    direction="row"
+                    alignItems="center"
+                    spacing={0.10}
                   >
-                    Relight Exterior Lighting <span>Residential, Commercial & HOA</span>
-                  </Box>
+                    <Box
+                      sx={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        height: 34,
+                        width: 'auto',
+                        mr: 1
+                      }}
+                    >
+                      <img src="assets/logo-main.png" alt="Logo" style={{ height: 34, width: 'auto', objectFit: 'contain' }}/>
+                    </Box>
+                    <Box
+                      sx={{
+                        color: 'text.primary',
+                        fontFamily: '\'Plus Jakarta Sans\', sans-serif',
+                        fontSize: 17.2,
+                        fontWeight: 800,
+                        letterSpacing: '0.3px',
+                        lineHeight: 2.5,
+                        '& span': {
+                          color: 'primary.main'
+                        }
+                      }}
+                    >
+                      Relight Exterior Lighting <span>Residential, Commercial & HOA</span>
+                    </Box>
+                  </Stack>
                 )}
               </Stack>
             </Stack>
@@ -160,6 +184,15 @@ export const TopNav: FC<TopNavProps> = (props) => {
             spacing={2}
             sx={{ flexGrow: 1 }}
           >
+             <Button
+              component={RouterLink}
+              href="/contact"
+              size={mdUp ? 'medium' : 'small'}
+              variant="contained"
+            >
+              Contact
+            </Button>
+
             <Button
               component={RouterLink}
               href="tel:+14254651290"

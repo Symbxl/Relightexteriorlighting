@@ -25,29 +25,29 @@ const features: Feature[] = [
     id: 'Holiday Lighting',
     title: 'Holiday Lighting',
     description: 'Permanent outdoor Christmas lights not only provide enduring festive charm but offer a covenient and time-saving lighting solution.',
-    imageDark: 'https://framerusercontent.com/images/QgR67iGl7v2MqarT07ikjKa1hLE.webp?scale-down-to=512',
-    imageLight: 'https://framerusercontent.com/images/QgR67iGl7v2MqarT07ikjKa1hLE.webp?scale-down-to=512'
+    imageDark: 'assets/christmas.jpg',
+    imageLight: 'assets/christmas.jpg'
   },
   {
     id: 'Accent Lighting',
     title: 'Accent Lighting',
     description: 'Lighting makes it easy to highlight specific features on your home like peaks or columns, or simply eliminate nightime darkness',
-    imageDark: 'https://framerusercontent.com/images/syG1Lx8V7godxgeio5OukDhEkks.webp',
-    imageLight: 'https://framerusercontent.com/images/syG1Lx8V7godxgeio5OukDhEkks.webp'
+    imageDark: 'assets/accent.png',
+    imageLight: 'assets/accent.png'
   },
   {
     id: 'Security Lighting',
     title: 'Security Lighting',
     description: 'Lighting makes it easier to spot suspicious activity or deter intruders on your property.',
-    imageDark: 'https://framerusercontent.com/images/2tuUvfSINeF9nvtfJpAHgJnhHK8.webp?scale-down-to=512',
-    imageLight: 'https://framerusercontent.com/images/2tuUvfSINeF9nvtfJpAHgJnhHK8.webp?scale-down-to=512'
+    imageDark: 'assets/security.png',
+    imageLight: 'assets/security.png'
   },
   {
     id: 'GameDay Lighting',
     title: 'GameDay Lighting',
     description: "Match your lights to your favorite teams' colors to show your team spirit. Make a custom schedule to sync your lights up to gameday. ",
-    imageDark: 'https://framerusercontent.com/images/ETVoKRP6J6fm6muP2Xs7J4WWKzU.webp?scale-down-to=512',
-    imageLight: 'https://framerusercontent.com/images/ETVoKRP6J6fm6muP2Xs7J4WWKzU.webp?scale-down-to=512'
+    imageDark: 'assets/seahawks.png',
+    imageLight: 'assets/seahawks.png'
   },
 ];
 
@@ -109,10 +109,7 @@ export const HomeFeatures: FC = () => {
               }}
             >
               <img src={image} />
-              <Button onClick={handleOne}>•</Button>
-              <Button onClick={handleTwo}>•</Button>
-              <Button onClick={handleThree}>•</Button>
-              <Button onClick={handleFour}>•</Button>
+        
             </Box>
           </Grid>
           <Grid

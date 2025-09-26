@@ -1,7 +1,9 @@
 import type { FC } from 'react';
-import { Box, Container, Stack, Typography } from '@mui/material';
+import { Box, Button, Container, Stack, Typography, SvgIcon } from '@mui/material';
 import EyeIcon from '@untitled-ui/icons-react/build/esm/Eye';
-import { SvgIcon } from '@mui/material';
+import ToolIcon from '@untitled-ui/icons-react/build/esm/Tool02';
+import { RouterLink } from 'src/components/router-link';
+import { paths } from 'src/paths';
 export const HomeCta: FC = () => (
   <Box
     sx={{
@@ -29,6 +31,34 @@ export const HomeCta: FC = () => (
           Every home is serviced by the trained professionals to make sure you're lighting is perfect.
         </Typography>
       </Stack>
+
+      <Stack
+        alignItems="center"
+        justifyContent="center"
+        sx={{ mt: 4, mb: 4 }}
+      >
+        <Button
+          component={RouterLink}
+          href={paths.installation}
+          variant="contained"
+          size="large"
+          startIcon={
+            <SvgIcon>
+              <ToolIcon />
+            </SvgIcon>
+          }
+          sx={{
+            backgroundColor: 'primary.main',
+            color: 'white',
+            '&:hover': {
+              backgroundColor: 'primary.dark'
+            }
+          }}
+        >
+          Learn About Installation
+        </Button>
+      </Stack>
+
       <Stack
         alignItems="center"
         direction="row"

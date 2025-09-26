@@ -3,6 +3,8 @@ export const paths = {
   checkout: '/checkout',
   contact: '/contact',
   warranty: '/warranty',
+  products: '/products',
+  installation: '/installation',
   pricing: '/pricing',
   auth: {
     auth0: {

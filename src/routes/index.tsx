@@ -7,6 +7,8 @@ import Error404Page from 'src/pages/404';
 import Error500Page from 'src/pages/500';
 import ContactPage from 'src/pages/contact';
 import WarrantyPage from 'src/pages/warranty';
+import ProductsPage from 'src/pages/products';
+import InstallationPage from 'src/pages/installation';
 import CheckoutPage from 'src/pages/checkout';
 import { authRoutes } from './auth';
 import { authDemoRoutes } from './auth-demo';
@@ -42,6 +44,14 @@ export const routes: RouteObject[] = [
   {
     path: 'warranty',
     element: <WarrantyPage />
+  },
+  {
+    path: 'products',
+    element: <ProductsPage />
+  },
+  {
+    path: 'installation',
+    element: <InstallationPage />
   },
   {
     path: '401',

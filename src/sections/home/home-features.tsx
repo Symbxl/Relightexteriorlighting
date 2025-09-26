@@ -11,6 +11,9 @@ import {
 } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import LinkExternal01Icon from '@untitled-ui/icons-react/build/esm/LinkExternal01';
+import LightbulbIcon from '@untitled-ui/icons-react/build/esm/Lightbulb02';
+import { RouterLink } from 'src/components/router-link';
+import { paths } from 'src/paths';
 
 interface Feature {
   id: string;
@@ -91,6 +94,35 @@ export const HomeFeatures: FC = () => {
             The all-in-one outdoor lighting solution, perfect for Companies, Homeowners & HOAs
           </Typography>
         </Stack>
+
+        <Stack
+          alignItems="center"
+          justifyContent="center"
+          sx={{ mb: 6 }}
+        >
+          <Button
+            component={RouterLink}
+            href={paths.products}
+            variant="outlined"
+            size="large"
+            startIcon={
+              <SvgIcon>
+                <LightbulbIcon />
+              </SvgIcon>
+            }
+            sx={{
+              borderColor: 'primary.main',
+              color: 'primary.main',
+              '&:hover': {
+                backgroundColor: 'primary.main',
+                color: 'white'
+              }
+            }}
+          >
+            Learn About Permanent Outdoor Lighting
+          </Button>
+        </Stack>
+
         <Grid
           alignItems="center"
           container

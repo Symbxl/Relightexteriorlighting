@@ -4,6 +4,7 @@ import PhoneIcon from '@untitled-ui/icons-react/build/esm/Phone';
 import { useCallback, useState } from 'react';
 import PropTypes from 'prop-types';
 import Menu01Icon from '@untitled-ui/icons-react/build/esm/Menu01';
+import XIcon from '@untitled-ui/icons-react/build/esm/X';
 import type { Theme } from '@mui/material';
 import {
   Box,
@@ -14,7 +15,14 @@ import {
   Stack,
   SvgIcon,
   useMediaQuery,
-  Link
+  Link,
+  Drawer,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemText,
+  Typography,
+  Divider
 } from '@mui/material';
 import { alpha } from '@mui/material/styles';
 import { Logo } from 'src/components/logo';
@@ -35,17 +43,24 @@ interface Item {
 
 const items: Item[] = [
   {
-    title: 'Components',
-    path: paths.components.index
+    title: 'Home',
+    path: paths.index
   },
   {
-    title: 'Pages',
-    popover: <PagesPopover />
+    title: 'Products',
+    path: paths.products
+  },
+   {
+    title: 'Installation',
+    path: paths.installation
   },
   {
-    title: 'Docs',
-    path: paths.docs,
-    external: true
+    title: 'Warranty',
+    path: paths.warranty
+  },
+  {
+    title: 'Contact',
+    path: paths.contact
   }
 ];
 
@@ -60,6 +75,7 @@ export const TopNav: FC<TopNavProps> = (props) => {
   const pathname = usePathname();
   const mdUp = useMediaQuery((theme: Theme) => theme.breakpoints.up('md'));
   const [elevate, setElevate] = useState<boolean>(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
   const offset = 64;
   const delay = 100;
 
@@ -73,6 +89,14 @@ export const TopNav: FC<TopNavProps> = (props) => {
     },
     []
   );
+
+  const handleMobileMenuOpen = useCallback((): void => {
+    setMobileMenuOpen(true);
+  }, []);
+
+  const handleMobileMenuClose = useCallback((): void => {
+    setMobileMenuOpen(false);
+  }, []);
 
   useWindowScroll({
     handler: handleWindowScroll,
@@ -177,7 +201,6 @@ export const TopNav: FC<TopNavProps> = (props) => {
                 )}
               </Stack>
             </Stack>
-
           </Stack>
           <Stack
             alignItems="center"
@@ -188,9 +211,9 @@ export const TopNav: FC<TopNavProps> = (props) => {
           >
             <Button
               component={RouterLink}
-              href="/contact"
+              href={paths.contact}
               size={mdUp ? 'medium' : 'small'}
-              variant="contained"
+              variant="outlined"
               startIcon={
                 <SvgIcon fontSize="inherit" sx={{ fontSize: 15 }}>
                   <ContactIcon />
@@ -199,7 +222,6 @@ export const TopNav: FC<TopNavProps> = (props) => {
             >
               Contact
             </Button>
-
             <Button
               component={RouterLink}
               href="tel:+14254651290"
@@ -213,9 +235,83 @@ export const TopNav: FC<TopNavProps> = (props) => {
             >
               425-465-1290
             </Button>
+            <IconButton
+              onClick={handleMobileMenuOpen}
+              sx={{
+                color: 'text.primary'
+              }}
+            >
+              <SvgIcon>
+                <Menu01Icon />
+              </SvgIcon>
+            </IconButton>
           </Stack>
         </Stack>
       </Container>
+
+      {/* Mobile Menu Drawer */}
+      <Drawer
+        anchor="right"
+        open={mobileMenuOpen}
+        onClose={handleMobileMenuClose}
+        PaperProps={{
+          sx: {
+            width: 280,
+            backgroundColor: 'background.paper'
+          }
+        }}
+      >
+        <Box
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            p: 2,
+            borderBottom: 1,
+            borderColor: 'divider'
+          }}
+        >
+          <Typography variant="h6" fontWeight="bold">
+            Menu
+          </Typography>
+          <IconButton onClick={handleMobileMenuClose}>
+            <SvgIcon>
+              <XIcon />
+            </SvgIcon>
+          </IconButton>
+        </Box>
+
+        <List sx={{ pt: 0 }}>
+          {items.map((item, index) => (
+            <ListItem key={item.title} disablePadding>
+              <ListItemButton
+                component={RouterLink}
+                href={item.path || '#'}
+                onClick={handleMobileMenuClose}
+                sx={{
+                  py: 1.5,
+                  px: 2,
+                  '&:hover': {
+                    backgroundColor: 'action.hover'
+                  },
+                  ...(pathname === item.path && {
+                    backgroundColor: 'primary.alpha8',
+                    color: 'primary.main',
+                    fontWeight: 600
+                  })
+                }}
+              >
+                <ListItemText
+                  primary={item.title}
+                  primaryTypographyProps={{
+                    fontWeight: pathname === item.path ? 600 : 400
+                  }}
+                />
+              </ListItemButton>
+            </ListItem>
+          ))}
+        </List>
+      </Drawer>
     </Box>
   );
 };

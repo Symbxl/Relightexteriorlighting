@@ -75,7 +75,7 @@ export const HomeHero: FC = () => {
             variant="h1"
             sx={{ mb: 2, fontSize: "60px !important" }}
           >
-            Permenant Outdoor {' '}
+            Permanent Outdoor {' '}
             <span
               style={{
                 color: theme.palette.primary.main,

@@ -172,7 +172,7 @@ const Page: PageType = () => {
                   {
                     title: 'Landscape Lighting',
                     description: 'Professional landscape lighting solutions that enhance your home\'s architecture with clean, modern illumination.',
-                    image: '/assets/landscape.png',
+                    image: '/assets/Landscape.png',
                     features: ['Architectural Enhancement', 'Weather Resistant', 'Professional Installation', 'Custom Design']
                   },
                   {
@@ -673,7 +673,7 @@ const Page: PageType = () => {
                         'Coverage': 'Unlimited square footage',
                         'Same day estimate': 'recive your quote within 24 hours',
                         'Maintenance': '5-year warranty',
-                        'Cooling': 'Built in fan',
+                        'Installation': 'Proffesional installation team',
                       }
                     },
                     {

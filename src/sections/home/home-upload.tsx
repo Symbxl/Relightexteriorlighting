@@ -49,7 +49,7 @@ export const HomeUpload: React.FC = () => {
 		<Box sx={{ py: 8, px: 2, textAlign: 'center' }}>
 			<Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', mb: 2 }}>
 				<Typography variant="h4" sx={{ mr: 1 }}>
-					See Your Home With Permanent Outdoor Lights
+					See Your Home With Permanent Lighting!
 				</Typography>
 				<Box
 					sx={{
@@ -75,7 +75,7 @@ export const HomeUpload: React.FC = () => {
 			</Box>
             <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', mb: 4 }}>
             <Typography variant="h6" sx={{ mr: 1 }}>
-					Type in the address of your home and we'll use Ai to generate an image of permanent lighting solutions.
+					Type in the address and we'll use Ai to generate an image of your home with permanent lighting solutions.
 			</Typography>
             </Box>
 			<Box sx={{ display: 'flex', alignItems: 'center', mb: 4, justifyContent: 'center' }}>

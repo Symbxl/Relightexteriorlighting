@@ -25,7 +25,7 @@ interface Values {
 }
 
 const initialValues: Values = {
-  email: 'zach@relight.ca',
+  email: 'zach@relightexteriorlighting.com',
   password: 'Password123!',
   submit: null
 };

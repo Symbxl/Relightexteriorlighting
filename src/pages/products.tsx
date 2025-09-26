@@ -666,36 +666,14 @@ const Page: PageType = () => {
                 <Grid container spacing={4} sx={{ mt: 2 }}>
                   {[
                     {
-                      name: 'Office Buildings',
+                      name: 'Office Buildings & Retail Spaces',
                       description: 'Energy-efficient LED solutions for corporate campuses, office complexes & more!',
                       image: '/assets/Firestation.png',
                       specs: {
                         'Coverage': 'Unlimited square footage',
                         'Same day estimate': 'recive your quote within 24 hours',
                         'Maintenance': '5-year warranty',
-                        'Installation': 'Proffesional installation team',
-                      }
-                    },
-                    {
-                      name: 'Retail Spaces',
-                      description: 'Attract customers with dynamic lighting that enhances your storefront',
-                      image: '/assets/Retail.png',
-                       specs: {
-                        'Coverage': 'Unlimited square footage',
-                        'Same day estimate': 'recive your quote within 24 hours',
-                        'Maintenance': '5-year warranty',
-                        'Installation': 'Proffesional installation team',
-                      }
-                    },
-                    {
-                      name: 'Multi-Unit Properties',
-                      description: 'Cost-effective lighting solutions for apartments and condominiums',
-                      image: '/assets/multi.png',
-                       specs: {
-                        'Coverage': 'Unlimited square footage',
-                        'Same day estimate': 'recive your quote within 24 hours',
-                        'Maintenance': '5-year warranty',
-                        'Installation': 'Proffesional installation team',
+                        'Cooling': 'Built in fan',
                       }
                     },
                     {

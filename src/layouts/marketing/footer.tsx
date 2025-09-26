@@ -41,7 +41,7 @@ const sections: Section[] = [
     items: [
       {
         title: 'Warranty',
-        path: '#'
+        path: '/warranty'
       }
     ]
   },

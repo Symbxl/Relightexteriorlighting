@@ -2,6 +2,7 @@ export const paths = {
   index: '/',
   checkout: '/checkout',
   contact: '/contact',
+  warranty: '/warranty',
   pricing: '/pricing',
   auth: {
     auth0: {

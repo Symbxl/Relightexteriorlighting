@@ -6,6 +6,7 @@ import Error401Page from 'src/pages/401';
 import Error404Page from 'src/pages/404';
 import Error500Page from 'src/pages/500';
 import ContactPage from 'src/pages/contact';
+import WarrantyPage from 'src/pages/warranty';
 import CheckoutPage from 'src/pages/checkout';
 import { authRoutes } from './auth';
 import { authDemoRoutes } from './auth-demo';
@@ -37,6 +38,10 @@ export const routes: RouteObject[] = [
   {
     path: 'contact',
     element: <ContactPage />
+  },
+  {
+    path: 'warranty',
+    element: <WarrantyPage />
   },
   {
     path: '401',

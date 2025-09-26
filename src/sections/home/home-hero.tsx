@@ -40,6 +40,8 @@ export const HomeHero: FC = () => {
       <Container maxWidth="xl">
         <Box maxWidth="sm">
           <Box
+            component={RouterLink}
+            href={paths.warranty}
             sx={{
               display: 'flex',
               alignItems: 'center',
@@ -52,13 +54,22 @@ export const HomeHero: FC = () => {
               fontWeight: 600,
               fontSize: 15,
               boxShadow: 2,
-              width: 'fit-content'
+              width: 'fit-content',
+              textDecoration: 'none',
+              cursor: 'pointer',
+              transition: 'all 0.2s ease-in-out',
+              '&:hover': {
+                backgroundColor: 'primary.main',
+                color: 'white',
+                transform: 'translateY(-1px)',
+                boxShadow: 4
+              }
             }}
           >
             <SvgIcon sx={{ mr: 1, fontSize: 20 }}>
               <PiShieldCheckBold />
             </SvgIcon>
-            Free 5 year warranty! 
+            Free 5 year warranty!
           </Box>
           <Typography
             variant="h1"

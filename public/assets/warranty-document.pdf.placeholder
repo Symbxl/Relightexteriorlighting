@@ -1,0 +1,14 @@
+This is a placeholder for the ReLight 5-Year Warranty PDF document.
+
+To complete the warranty page setup:
+1. Replace this placeholder with an actual PDF file named "warranty-document.pdf"
+2. The PDF should contain the official warranty terms and conditions
+3. Include company branding and legal disclaimers
+4. Ensure the PDF is professionally formatted with:
+   - Company logo and contact information
+   - Complete warranty terms (5 years)
+   - What's covered and excluded
+   - How to file warranty claims
+   - Legal disclaimers and limitations
+
+The warranty page at /warranty will allow users to download this PDF document when clicking the "Download Warranty Certificate (PDF)" button.

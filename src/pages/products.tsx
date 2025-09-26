@@ -148,7 +148,7 @@ const Page: PageType = () => {
             {/* Product Categories */}
             <Box>
               <Typography variant="h3" align="center" gutterBottom>
-                Our Lighting Solutions
+                Permanent Outdoor Lighting Solutions
               </Typography>
               <Typography
                 variant="h6"
@@ -771,10 +771,10 @@ const Page: PageType = () => {
                       <Card sx={{ height: '100%' }}>
                         <CardContent sx={{ p: 3 }}>
                           <Typography variant="h6" gutterBottom color="primary.main">
-                            🏢 Increased Property Value
+                            🏢 Increased Curb Appeal
                           </Typography>
                           <Typography color="text.secondary">
-                            Professional lighting systems can increase commercial property values by 15-20% while attracting premium tenants and customers.
+                            Professional lighting systems can increase curb appeal, helping attract premium tenants and customers.
                           </Typography>
                         </CardContent>
                       </Card>
@@ -798,7 +798,7 @@ const Page: PageType = () => {
                             🔧 Reduced Maintenance
                           </Typography>
                           <Typography color="text.secondary">
-                            Our commercial systems require minimal maintenance with 10+ year lifespans and comprehensive warranty coverage.
+                            Our commercial systems require minimal maintenance with 8+ year lifespans and comprehensive warranty coverage.
                           </Typography>
                         </CardContent>
                       </Card>

@@ -106,7 +106,7 @@ const Page: PageType = () => {
                 color="text.secondary"
                 sx={{ maxWidth: 600 }}
               >
-                Your investment in ReLight permanent outdoor lighting is protected by our industry-leading 5-year comprehensive warranty. We stand behind our products with complete confidence.
+                Your investment in Permanent Outdoor Lighting is protected by our industry-leading 5-year comprehensive warranty. We stand behind our products with complete confidence.
               </Typography>
 
               <Button
@@ -131,7 +131,7 @@ const Page: PageType = () => {
                   What's Covered
                 </Typography>
                 <Typography variant="body1" color="text.secondary" paragraph>
-                  Our 5-year warranty covers all aspects of your ReLight system, ensuring peace of mind and protection for your investment.
+                  Our 5-year warranty covers all aspects of your permanent outdoor lighting, ensuring peace of mind and protection for your investment.
                 </Typography>
 
                 <List>

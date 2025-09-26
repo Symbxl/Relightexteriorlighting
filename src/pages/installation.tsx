@@ -42,10 +42,10 @@ const Page: PageType = () => {
       icon: <CalendarIcon />,
       title: 'Free Consultation & Quote',
       description: 'Schedule a free on-site consultation where our experts assess your home and provide a detailed quote.',
-      duration: '1-2 hours',
+      duration: '30 minuets',
       details: [
         'Property assessment and measurements',
-        'Design consultation and color recommendations',
+        'Design consultation and track color recommendations',
         'Detailed written quote with no hidden fees',
         'Timeline and scheduling discussion'
       ]
@@ -53,13 +53,13 @@ const Page: PageType = () => {
     {
       icon: <ToolsIcon />,
       title: 'Design & Planning',
-      description: 'Our team creates a custom lighting design plan tailored specifically to your home\'s architecture.',
-      duration: '2-3 days',
+      description: 'Our team creates a custom quote, and lighting design plan tailored specifically to your home\'s architecture.',
+      duration: 'ready within 2-3 hours',
       details: [
         'Custom lighting layout design',
         'Electrical requirements assessment',
-        'Permit acquisition (if required)',
-        'Material ordering and preparation'
+        'Material ordering and preparation',
+        'Quote breakdown and approval'
       ]
     },
     {
@@ -78,7 +78,7 @@ const Page: PageType = () => {
       icon: <UserIcon />,
       title: 'Training & Support',
       description: 'Learn how to use your new lighting system with comprehensive training and ongoing support.',
-      duration: '30 minutes',
+      duration: '20 minutes',
       details: [
         'Mobile app tutorial and setup',
         'Custom scene programming',
@@ -91,7 +91,7 @@ const Page: PageType = () => {
   const whyChooseUs = [
     {
       title: 'Certified Technicians',
-      description: 'All installers are fully licensed, insured, and trained in Jellyfish installation techniques.',
+      description: 'All installers are fully insured and trained in Jellyfish installation techniques.',
       icon: <CheckCircleIcon />
     },
     {
@@ -101,7 +101,7 @@ const Page: PageType = () => {
     },
     {
       title: 'Lifetime Support',
-      description: 'Ongoing technical support and maintenance services for the life of your system.',
+      description: 'Ongoing technical support and maintenance services for the life of your system and a 5 year warranty.',
       icon: <UserIcon />
     }
   ];
@@ -113,7 +113,7 @@ const Page: PageType = () => {
     },
     {
       question: 'Do you need to access my roof?',
-      answer: 'Our technicians are trained in safe roof access and use professional equipment. We take all necessary safety precautions.'
+      answer: 'To install your Jellyfish Lighting Eave Lights, we will need access to both your roof and attic. This allows us to safely and efficciently run the wiring and mount the lights using proffesional equipment. We train everyone on the installation team to take all necessary safety precautions.'
     },
     {
       question: 'What about my existing holiday lights?',

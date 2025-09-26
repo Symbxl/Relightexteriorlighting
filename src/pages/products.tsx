@@ -244,53 +244,15 @@ const Page: PageType = () => {
                             </Box>
                           ))}
                         </Stack>
-                        {index === 1 ? (
-                          <Button
+                        <Button
                             fullWidth
                             variant={showLandscapeLighting ? 'contained' : 'outlined'}
-                            sx={{ mt: 2 }}
-                            onClick={() => {
-                              setShowLandscapeLighting(!showLandscapeLighting);
-                              setShowCommercialProperties(false);
-                            }}
-                          >
-                            {showLandscapeLighting ? 'Get a Quote' : 'Learn More'}
-                          </Button>
-                        ) : index === 2 ? (
-                          <Button
-                            fullWidth
-                            variant={showCommercialProperties ? 'contained' : 'outlined'}
-                            sx={{ mt: 2 }}
-                            onClick={() => {
-                              setShowCommercialProperties(!showCommercialProperties);
-                              setShowLandscapeLighting(false);
-                            }}
-                          >
-                            {showCommercialProperties ? 'Get a Quote' : 'Learn More'}
-                          </Button>
-                        ) : index === 0 && (showLandscapeLighting || showCommercialProperties) ? (
-                          <Button
-                            fullWidth
-                            variant="outlined"
-                            sx={{ mt: 2 }}
-                            onClick={() => {
-                              setShowLandscapeLighting(false);
-                              setShowCommercialProperties(false);
-                            }}
-                          >
-                            Learn More
-                          </Button>
-                        ) : (
-                          <Button
-                            fullWidth
-                            variant={index === 0 ? 'contained' : 'outlined'}
                             sx={{ mt: 2 }}
                             component={RouterLink}
                             href={paths.contact}
                           >
-                            {index === 0 ? 'Get Quote' : 'Learn More'}
+                            Get your free quote!
                           </Button>
-                        )}
                       </CardContent>
                     </Card>
                   </Grid>

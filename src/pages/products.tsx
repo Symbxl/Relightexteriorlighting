@@ -53,14 +53,19 @@ const Page: PageType = () => {
   ];
 
   const specifications = [
-    { label: 'LED Lifespan', value: '50,000+ hours' },
-    { label: 'Color Options', value: '16 million colors' },
-    { label: 'Brightness', value: '120 lumens per foot' },
-    { label: 'Weather Rating', value: 'IP67 Waterproof' },
-    { label: 'Operating Temperature', value: '-40°F to 140°F' },
-    { label: 'Warranty', value: '5 Years Comprehensive' },
-    { label: 'Energy Consumption', value: '7W per foot' },
-    { label: 'Control Range', value: 'Unlimited (WiFi)' }
+    { label: 'Beam Angle', value: '140°' },
+    { label: 'Color Options', value: '16 million colors (Red, Green, Blue)' },
+    { label: 'Operating Voltage', value: '48 Volts' },
+    { label: 'Max Power Draw', value: '1W per LED Module' },
+    { label: 'Amperage', value: '.019 amps at 48V' },
+    { label: 'Data Mode', value: 'WS2811' },
+    { label: 'Lumens', value: '21 Lumens per LED Module' },
+    { label: 'Lens Type', value: 'Frosted' },
+    { label: 'IP Rating', value: '67' },
+    { label: 'Operating Temperature', value: '-40°C to +55°C (-40°F to +131°F)' },
+    { label: 'White Color', value: '2200k-7000k (adjustable)' },
+    { label: 'Wire', value: '16 gauge' },
+    { label: 'Safety Certification', value: 'UL E521737 & UL E533890' },
   ];
 
   const advantages = [
@@ -162,7 +167,7 @@ const Page: PageType = () => {
                     title: 'Jellyfish Permanent LED Lights',
                     description: 'Premium permanent outdoor lighting for residential homes with 16 million color combinations and smart app control.',
                     image: '/assets/ai-house.jpg',
-                    features: ['Smart App Control', '16M Colors', '5-Year Warranty', 'Energy Efficient']
+                    features: ['Smart App Control', '16M Colors', '5-Year Warranty', 'Weather Resistant', 'Professional Installation']
                   },
                   {
                     title: 'Landscape Lighting',
@@ -173,7 +178,7 @@ const Page: PageType = () => {
                   {
                     title: 'Commercial Properties',
                     description: 'Large-scale lighting solutions for commercial buildings, retail spaces, and multi-unit properties.',
-                    image: '/assets/security.png',
+                    image: '/assets/Commercial.png',
                     features: ['Large Scale Projects', 'Commercial Grade', 'Maintenance Plans', 'Energy Savings']
                   }
                 ].map((category, index) => (
@@ -359,7 +364,7 @@ const Page: PageType = () => {
               </Grid>
             </Box>
 
-            {/* Specifications */}
+            Specifications
             <Card>
               <CardContent sx={{ p: 4 }}>
                 <Typography variant="h4" gutterBottom>
@@ -662,54 +667,46 @@ const Page: PageType = () => {
                   {[
                     {
                       name: 'Office Buildings',
-                      description: 'Energy-efficient LED solutions for corporate campuses and office complexes',
-                      image: '/assets/security.png',
+                      description: 'Energy-efficient LED solutions for corporate campuses, office complexes & more!',
+                      image: '/assets/Firestation.png',
                       specs: {
-                        'Coverage': 'Up to 500,000 sq ft',
-                        'Energy Savings': '70% reduction',
-                        'Maintenance': '10-year warranty',
-                        'Installation': 'Licensed commercial crews',
-                        'Controls': 'Smart building integration',
-                        'Compliance': 'Commercial building codes'
+                        'Coverage': 'Unlimited square footage',
+                        'Same day estimate': 'recive your quote within 24 hours',
+                        'Maintenance': '5-year warranty',
+                        'Installation': 'Proffesional installation team',
                       }
                     },
                     {
                       name: 'Retail Spaces',
                       description: 'Attract customers with dynamic lighting that enhances your storefront',
-                      image: '/assets/accent.png',
-                      specs: {
-                        'Brightness': 'Up to 2000 lumens/ft',
-                        'Colors': '16 million+ combinations',
-                        'Scheduling': 'Business hours automation',
-                        'Material': 'Commercial-grade aluminum',
-                        'Weather Rating': 'IP68 certified',
-                        'Support': '24/7 technical support'
+                      image: '/assets/Retail.png',
+                       specs: {
+                        'Coverage': 'Unlimited square footage',
+                        'Same day estimate': 'recive your quote within 24 hours',
+                        'Maintenance': '5-year warranty',
+                        'Installation': 'Proffesional installation team',
                       }
                     },
                     {
                       name: 'Multi-Unit Properties',
                       description: 'Cost-effective lighting solutions for apartments and condominiums',
-                      image: '/assets/ai-house.jpg',
-                      specs: {
-                        'Scale': 'Multi-building projects',
-                        'Cost': 'Bulk pricing available',
-                        'Management': 'Centralized control system',
-                        'Maintenance': 'Property manager training',
-                        'Financing': 'Commercial lease options',
-                        'Timeline': '30-90 day installation'
+                      image: '/assets/multi.png',
+                       specs: {
+                        'Coverage': 'Unlimited square footage',
+                        'Same day estimate': 'recive your quote within 24 hours',
+                        'Maintenance': '5-year warranty',
+                        'Installation': 'Proffesional installation team',
                       }
                     },
                     {
-                      name: 'Hotels & Hospitality',
+                      name: 'Air BnB & Rentals',
                       description: 'Create memorable experiences with customizable architectural lighting',
                       image: '/assets/christmas.jpg',
-                      specs: {
-                        'Ambiance': 'Custom scene programming',
-                        'Events': 'Holiday and special occasions',
-                        'Integration': 'Hotel management systems',
-                        'Guest Control': 'Mobile app access',
-                        'Durability': 'Heavy-duty construction',
-                        'Service': 'Priority maintenance plans'
+                       specs: {
+                        'Coverage': 'Unlimited square footage',
+                        'Same day estimate': 'recive your quote within 24 hours',
+                        'Maintenance': '5-year warranty',
+                        'Installation': 'Proffesional installation team',
                       }
                     }
                   ].map((property, index) => (
@@ -808,10 +805,10 @@ const Page: PageType = () => {
                       <Card sx={{ height: '100%' }}>
                         <CardContent sx={{ p: 3 }}>
                           <Typography variant="h6" gutterBottom color="primary.main">
-                            ⚡ Massive Energy Savings
+                            ⚡ Unlimited controllers
                           </Typography>
                           <Typography color="text.secondary">
-                            LED commercial lighting reduces energy consumption by 60-80%, resulting in significant monthly utility bill reductions.
+                            Manage multiple buildings and locations from a single app with unlimited controllers and zones.
                           </Typography>
                         </CardContent>
                       </Card>
@@ -842,56 +839,6 @@ const Page: PageType = () => {
                     </Grid>
                   </Grid>
                 </Box>
-
-                {/* Commercial Process */}
-                <Card sx={{ mt: 4 }}>
-                  <CardContent sx={{ p: 4 }}>
-                    <Typography variant="h5" gutterBottom>
-                      Commercial Project Process
-                    </Typography>
-                    <Typography variant="body1" color="text.secondary" paragraph>
-                      We handle everything from initial assessment to ongoing maintenance for your commercial lighting project.
-                    </Typography>
-                    <Grid container spacing={4} sx={{ mt: 2 }}>
-                      {[
-                        {
-                          phase: 'Assessment',
-                          duration: '1-2 weeks',
-                          description: 'Site survey, energy audit, and lighting design proposal with ROI analysis.'
-                        },
-                        {
-                          phase: 'Planning',
-                          duration: '2-3 weeks',
-                          description: 'Permit acquisition, electrical planning, and project timeline coordination.'
-                        },
-                        {
-                          phase: 'Installation',
-                          duration: '2-8 weeks',
-                          description: 'Professional installation by licensed commercial electricians with minimal business disruption.'
-                        },
-                        {
-                          phase: 'Support',
-                          duration: 'Ongoing',
-                          description: 'Training, warranty support, and optional maintenance plans for long-term peace of mind.'
-                        }
-                      ].map((phase, index) => (
-                        <Grid item xs={12} sm={6} md={3} key={index}>
-                          <Box>
-                            <Typography variant="h6" color="primary.main" gutterBottom>
-                              {phase.phase}
-                            </Typography>
-                            <Typography variant="caption" color="text.secondary" display="block" gutterBottom>
-                              Timeline: {phase.duration}
-                            </Typography>
-                            <Typography variant="body2">
-                              {phase.description}
-                            </Typography>
-                          </Box>
-                        </Grid>
-                      ))}
-                    </Grid>
-                  </CardContent>
-                </Card>
               </Box>
 
             {/* Advantages */}

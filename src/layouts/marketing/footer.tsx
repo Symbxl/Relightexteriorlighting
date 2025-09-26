@@ -50,15 +50,21 @@ const sections: Section[] = [
     items: [
       {
         title: 'X',
-        path: 'www.x.com/relightexterior'
+        // 🛠️ Added 'https://' and 'external: true'
+        path: 'https://www.x.com/relightexterior',
+        external: true
       },
       {
         title: 'Instagram',
-        path: 'www.instagram.com/relightexterior'
+        // 🛠️ Added 'https://' and 'external: true'
+        path: 'https://www.instagram.com/relightexterior',
+        external: true
       },
       {
         title: 'Facebook',
-        path: 'www.facebook.com/relightexterior'
+        // 🛠️ Added 'https://' and 'external: true'
+        path: 'https://www.facebook.com/relightexterior',
+        external: true
       },
     ]
   }
